@@ -26,6 +26,10 @@ Enable module in **NexT** `_config.yml` file:
 
 ```yml
 three_waves: true
+OR
+canvas_lines: true
+OR
+canvas_sphere: true
 ```
 
 <h1 align="center">Update</h1>
