@@ -15,7 +15,7 @@ gulp.task('scripts', () => {
     return gulp.src([`src/${fileName}.js`, 'lib/*.js'])
       .pipe(concat(`${fileName}.min.js`))
       .pipe(uglify())
-      .pipe(gulp.dest('./'));
+      .pipe(gulp.dest('./'))
   })
 })
 
