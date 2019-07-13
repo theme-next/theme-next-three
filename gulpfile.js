@@ -4,11 +4,11 @@ const gulp = require('gulp')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 
-gulp.task('clean', () => {
+gulp.task('clean', async () => {
   del(['*.min.js', '!three.min.js'])
 })
 
-gulp.task('scripts', () => {
+gulp.task('scripts', async () => {
   const sourceFiles = fs.readdirSync('src')
   sourceFiles.forEach(file => {
     const fileName = file.split('.')[0]
@@ -19,4 +19,4 @@ gulp.task('scripts', () => {
   })
 })
 
-gulp.task('default', ['clean', 'scripts'])
+gulp.task('default', gulp.series('clean', 'scripts'))
